@@ -25,7 +25,7 @@ var data=[
         }]
     },
     {
-        content:"上海",
+        content:"上海(￥8.5の旅行)",
         start:"2024-2-20",
         end:"2024-2-22",
         style:STYLE_NEAR,
@@ -33,6 +33,16 @@ var data=[
         loc:[{
             name:"上海",
             altname:"Shanghai"
+        }]
+    },
+    {
+        content:"熙南里、老门东",
+        start:"2024-2-5",
+        style:STYLE_NJ,
+        tag:["tr:m","tr:b","w:ZKY"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
         }]
     },
     {
@@ -47,7 +57,7 @@ var data=[
         }]
     },
     {
-        content:"HHS冬大祭'24",
+        content:"汤山一号温泉(HHS冬大祭'24)",
         start:"2024-1-6",
         end:"2024-1-7",
         style:STYLE_NJ,
@@ -58,7 +68,7 @@ var data=[
         }]
     },
     {
-        content:"政治之旅",
+        content:"明觉(政治之旅)",
         start:"2024-1-3",
         style:STYLE_NJ,
         tag:["tr:m","w:Myself"],
@@ -68,7 +78,7 @@ var data=[
         }]
     },
     {
-        content:"花博园之旅",
+        content:"南京花博园",
         start:"2024-1-1",
         style:STYLE_NJ,
         tag:["tr:c","w:Family"],
@@ -81,7 +91,264 @@ var data=[
         content:"南外新校区探索",
         start:"2023-12-28",
         style:STYLE_NJ,
+        tag:["tr:c","w:XZM","w:HDD","w:ZKY"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }]
+    },
+    {
+        content:"江心洲",
+        start:"2023-12-9",
+        style:STYLE_NJ,
         tag:["tr:c","w:Family"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }]
+    },
+    {
+        content:"济南ACM",
+        start:"2023-12-1",
+        end:"2023-12-3",
+        style:STYLE_FAR,
+        tag:["tr:h","tr:m","w:CDR","w:ZZX"],
+        loc:[{
+            name:"济南",
+            altname:"Jinan"
+        }]
+    },
+    {
+        content:"哈尔滨ACM",
+        start:"2023-11-3",
+        end:"2023-11-5",
+        style:STYLE_FAR,
+        tag:["tr:p","tr:m","w:CDR","w:ZZX"],
+        loc:[{
+            name:"哈尔滨",
+            altname:"Haerbin"
+        }]
+    },
+    {
+        content:"莫愁湖",
+        start:"2023-8-18",
+        style:STYLE_NJ,
+        tag:["tr:m","w:ZKY"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }]
+    },
+    {
+        content:"日本",
+        start:"2023-8-6",
+        end:"2023-8-15",
+        style:STYLE_ABROAD,
+        tag:["tr:p","tr:h","tr:t","tr:m","tr:b","w:Family"],
+        loc:[{
+            name:"大阪",
+            altname:"Osaka"
+        },
+        {
+            name:"奈良",
+            altname:"Nara"
+        },{
+            name:"京都",
+            altname:"Kyoto"
+        },{
+            name:"富士山",
+            altname:"Mt.Fuji"
+        },{
+            name:"東京",
+            altname:"Tokyo"
+        },]
+    },
+    {
+        content:"湖州",
+        start:"2023-7-24",
+        end:"2023-7-25",
+        style:STYLE_NEAR,
+        tag:["tr:h","w:ZKY"],
+        loc:[{
+            name:"湖州",
+            altname:"Huzhou"
+        },
+        {
+            name:"南浔",
+            altname:"Nanxun"
+        }]
+    },
+    {
+        content:"山西老家附近",
+        start:"2023-7-14",
+        end:"2023-7-21",
+        style:STYLE_FAR,
+        tag:["tr:h","tr:c","w:Family"],
+        loc:[{
+            name:"运城",
+            altname:"Yuncheng"
+        },{
+            name:"平陆",
+            altname:"Pinglu"
+        },{
+            name:"三门峡",
+            altname:"Sanmenxia"
+        },
+        ],
+    },
+    {
+        content:"鱼嘴探索",
+        start:"2023-7-3",
+        style:STYLE_NJ,
+        tag:["tr:m","w:Myself"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }]
+    },
+    {
+        content:"溧阳",
+        start:"2023-6-26",
+        end:"2023-6-27",
+        style:STYLE_NEAR,
+        tag:["tr:h","w:ZKY"],
+        loc:[{
+            name:"溧阳",
+            altname:"Liyang"
+        }],
+        detail:"天目湖、南山竹海"
+    },
+    {
+        content:"7号线探线",
+        start:"2023-6-15",
+        style:STYLE_NJ,
+        tag:["tr:m","w:ZKY"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }]
+    },
+    {
+        content:"老山",
+        start:"2023-1-25",
+        style:STYLE_NJ,
+        tag:["tr:c","w:Family"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }]
+    },
+    {
+        content:"镇江",
+        start:"2023-1-24",
+        style:STYLE_NEAR,
+        tag:["tr:t","tr:h","tr:b","w:ZKY"],
+        loc:[{
+            name:"镇江",
+            altname:"Zhenjiang"
+        }]
+    },
+    {
+        content:"汤山矿坑公园",
+        start:"2022-10-3",
+        style:STYLE_NJ,
+        tag:["tr:c","w:Family"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }]
+    },
+    {
+        content:"邗江数竞",
+        start:"2022-9-10",
+        end:"2022-9-11",
+        style:STYLE_NEAR,
+        tag:["tr:c","w:Family","w:ZKY"],
+        loc:[{
+            name:"邗江",
+            altname:"Hanjiang"
+        }]
+    },
+    {
+        content:"高淳",
+        start:"2022-8-12",
+        style:STYLE_NJ,
+        tag:["tr:m","w:ZKY"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }]
+    },
+    {
+        content:"紫金山",
+        start:"2022-4-22",
+        style:STYLE_NJ,
+        tag:["w:ZKY","w:?"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }]
+    },
+    {
+        content:"德基美术馆II",
+        start:"2022-2-12",
+        style:STYLE_NJ,
+        tag:["tr:m","w:Family"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }]
+    },
+    {
+        content:"银杏湖民宿",
+        start:"2022-2-3",
+        end:"2022-2-4",
+        style:STYLE_NJ,
+        tag:["tr:c","w:WZZ","w:PrimarySchoolFriends"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }]
+    },
+    {
+        content:"德基美术馆",
+        start:"2022-2-2",
+        style:STYLE_NJ,
+        tag:["tr:m","w:Family"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }]
+    },
+    {
+        content:"S6、麒麟有轨探线",
+        start:"2022-2-1",
+        style:STYLE_NJ,
+        tag:["tr:m","w:Family"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        },
+        {
+            name:"句容",
+            altname:"Jurong"
+        }]
+    },
+    {
+        content:"红山动物园春游",
+        start:"2021-11-13",
+        style:STYLE_NJ,
+        tag:["tr:c","w:ZKY","w:HDD"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }]
+    },
+    {
+        content:"灵谷寺",
+        start:"2021-10-5",
+        style:STYLE_NJ,
+        tag:["tr:m","tr:b","w:ZKY","w:XZM","w:ZYT","w:MonkeyKing"],
         loc:[{
             name:"南京",
             altname:"Nanjing"

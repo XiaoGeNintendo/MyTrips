@@ -43,12 +43,23 @@
 
         <div id="content" style="margin-bottom: 20px; margin-top: 20px;">
             <div class="ui segment">
+                <h1>Greetings</h1>
                 Welcome to MyTrip! This is a site tracking my journey records. <br/>
-                Open-source on <a href="">Github</a>
+                人生的精彩在于前去探索不同的地区、体验各异的风土人情、沉醉于自然的鬼斧神工以丰富已有的认知。而旅行，无论远近，不仅是获得快乐的手段，更是拓展自我的最好的方式。<br/>
+                每一次旅行，都不应该风化成记忆的浮尘（很可惜，许多已经如此），本站的设立便是从某个角度上保留我的经历，希望日后可以回味和各种人的出会、周游各地的浪漫。 <br/>
+                Open-source on <a href="">Github</a> <br/>
+
+                一些我记得的但是没有在列表中的：<span class="ui green text">金牛湖（HHS）、烟台（Family）、新疆（Family）、园博园（Family）、高淳(Family)</span>
+
             </div>
 
             <div class="ui segment">
                 <h1>Timeline</h1>
+
+                <div class="ui toggle checkbox" style="margin-bottom: 20px;">
+                    <input onchange="changeBox()" type="checkbox" id="range">
+                    <label>Show Range Instead Of Start Date</label>
+                </div>
 
                 <div id="timeline"></div>
             </div>
@@ -65,6 +76,29 @@
     </div>
 
     <script>
+
+        function changeBox(){
+            if($('#range').prop('checked')){
+                for(var i=0;i<data.length;i++){
+                    if(data[i]._end==undefined){
+                        data[i].end=data[i].start+" 23:59:00";
+                    }else{
+                        data[i].end=data[i]._end+" 23:59:00"; //when converting add 23:59 to make it another day
+                    }
+                }
+            }else{
+                for(var i=0;i<data.length;i++){
+                    data[i].end=undefined;
+                }
+            }
+
+            timeline.setItems(data);
+        }
+
+        for(var i=0;i<data.length;i++){
+            data[i]._end=data[i].end; //_end stores the original end data
+            data[i].end=undefined;
+        }
 
         for(var i=0;i<data.length;i++){
             data[i].id=i;

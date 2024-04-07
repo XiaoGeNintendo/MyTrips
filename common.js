@@ -28,15 +28,15 @@ function fillView(data, prefix){
     $('#'+prefix+'_name').text(data.content)
 
     var text=""
-    if(data.end==undefined){
+    if(data._end==undefined){
         text=`On <span class="ui red text">${data.start}</span>,`
     }else{
-        text=`On <span class="ui red text">${data.start}</span> to <span class="ui red text">${data.end}</span>,`
+        text=`On <span class="ui red text">${data.start}</span> to <span class="ui red text">${data._end}</span>,`
     }
 
     text+=` I went to <span class="ui green text">${data.loc.map(
         function(e){return e.altname==undefined?`${e.name}`:
             `<ruby>${e.name}<rt>${e.altname}</rt></ruby>`})
-        .join("and ")}</span> with <span class="ui blue text">${data.tag.filter(function(e){return e.startsWith("w")}).map(function(e){return e.substr(2)}).join("and ")}</span>`
+        .join(" and ")}</span> with <span class="ui purple text">${data.tag.filter(function(e){return e.startsWith("w")}).map(function(e){return e.substr(2)}).join(" and ")}</span>`
     $('#'+prefix+'_text').html(text);
 }
