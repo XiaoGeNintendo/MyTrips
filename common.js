@@ -38,7 +38,11 @@ function fillView(data, prefix, slashMode=false){
     text+=` I went to <span class="ui green text">${data.loc.map(
         function(e){return e.altname==undefined?`${e.name}`:
             `<ruby>${e.name}<rt>${e.altname}</rt></ruby>`})
-        .join(" and ")}</span> with <span class="ui purple text">${data.tag.filter(function(e){return e.startsWith("w")}).map(function(e){return e.substr(2)}).join(" and ")}</span>`
+        .join(" and ")}</span> with <span class="ui purple text">${data.tag.filter(function(e){return e.startsWith("w")}).map(function(e){return e.substr(2)}).join(" and ")}</span>.`
+    
+    if(data.globe!=undefined){
+        text+=` This trip I covered approximately <span class="ui orange text">${Math.round(totalDistance(data))}</span>km.`
+    }
     $('#'+prefix+'_text').html(text);
 }
 
@@ -80,6 +84,23 @@ function dist(l1, l2){
     var distance = R * c;
 
     return distance;
+}
+
+//parameter: trip data
+function totalDistance(trip){
+    //single data format
+    if(trip.globe==undefined){
+        return 0;
+    }
+    if(typeof trip.globe[0]=='number'){
+        return 2*dist(myLoc,trip.globe);
+    }
+    var ans=dist(myLoc,trip.globe[0])
+    for(var i=0;i<trip.globe.length-1;i++){
+        ans+=dist(trip.globe[i],trip.globe[i+1]);
+    }
+    ans+=dist(trip.globe[trip.globe.length-1],myLoc);
+    return ans;
 }
 
 function days(date1Str, date2Str) {

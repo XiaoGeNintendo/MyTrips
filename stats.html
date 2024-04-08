@@ -101,7 +101,9 @@
             </div>
 
             <div class="ui warning message">
-                *距离的计算方法：从南京龙江地铁站到起始点的距离+行程的距离+结束点到龙江地铁站的距离。全部都按照直线距离计算。 <br/>
+                *距离的计算方法： <br/>
+                2*从南京龙江地铁站到目标的距离（适用于目标单一或线路较短的情况） <br/>
+                从南京龙江地铁站到起始点的距离+行程的距离+结束点到龙江地铁站的距离。全部都按照直线距离计算。（适用于目标为多个地方的情况） <br/>
                 开始点的确定方法：如果是南京市内旅游，精确到具体场所；市外旅游只保证精确到市的地理中心位置。 <br/>
                 经纬度数据来源是Google Map和百度地图。
             </div>
@@ -131,7 +133,7 @@
 
         $('#trip_count').text(sum(e => 1));
         $('#trip_time').text(sum(e => e.end==undefined?1:1+days(e.start,e.end)));
-        $('#trip_dist').text(Math.round(sum(e=> e.globe==undefined?0:2*dist(myLoc,e.globe))))
+        $('#trip_dist').text(Math.round(sum(e=> totalDistance(e))))
 
         count('tr',"飞机 Aeroplane",e => e.tag.includes('tr:p'))
         count('tr',"高速铁路 High-speed Railway",e => e.tag.includes('tr:h'))
