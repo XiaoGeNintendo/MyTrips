@@ -13,8 +13,20 @@
     <link href="
     https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css
     " rel="stylesheet">
+
     <script type="text/javascript" src="https://unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js"></script>
     <link href="https://unpkg.com/vis-timeline@latest/styles/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="
+    https://cdn.jsdelivr.net/npm/proj4@2.11.0/dist/proj4.min.js
+    "></script>
+
+    <script src="
+    https://cdn.jsdelivr.net/npm/highmaps-release@6.0.4/highmaps.min.js
+    "></script>
+    <script src="https://img.hcharts.cn/mapdata/custom/world.js"></script>
+    <script src="https://data.jianshukeji.com/geochina/china.js"></script>
+
     <script src="data.js"></script>
     <script src="common.js"></script>
 </head>
@@ -71,6 +83,11 @@
                 <h2 id="qv_name"></h2>
                 <div id="qv_text"></div>
             </div>
+
+            <div class="ui segment">
+                <h1>Map</h1>
+                <div id="global_map"></div>
+            </div>
         </div>
 
     </div>
@@ -119,6 +136,61 @@
             console.log(data[e.items[0]])
             fillView(data[e.items[0]],'qv',true)
         })
+
+
+        var seriesData=[]
+        for(var i in data){
+            var e=data[i]
+            if(e.globe==undefined || e.style==STYLE_ABROAD){
+                continue
+            }
+            if(typeof e.globe[0]=='number'){
+                seriesData.push({name:e.content,lat:e.globe[0],lon:e.globe[1]})
+            }else{
+                for(var j in e.globe){
+                    var ee=e.globe[j]
+                    
+                    seriesData.push({name:e.content,lat:ee[0],lon:ee[1]})
+                }
+            }
+        }
+
+        // Initiate the chart
+        $('#global_map').highcharts('Map', {
+            title: {
+                text: 'Map of China',
+            },
+            subtitle:{
+                text: "Note that this map may contain error on borders. Please contact Jianshu Technology for the problem."
+            },
+            mapNavigation: {
+                enabled: true
+            },
+            tooltip: {
+                headerFormat: '',
+                pointFormat: '<b>{point.name}</b>'
+            },
+            series: [{
+                mapData: Highcharts.maps['cn/china'],
+                name: 'Basemap',
+                borderColor: '#A0A0A0',
+                showInLegend: false
+            }, {
+                // Specify points using lat/lon
+                type: 'mappoint',
+                name: 'Tour Destinations',
+                color: '#0369f3',
+                marker: {
+                    "fillColor": "white",
+                    "lineColor": "black",
+                    "lineWidth": 2,
+                    "radius": 3
+                },
+                data: seriesData
+            }]
+        });
+
+
     </script>
 </body>
 
