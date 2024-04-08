@@ -43,6 +43,9 @@ function fillView(data, prefix, slashMode=false){
     if(data.globe!=undefined){
         text+=` This trip I covered approximately <span class="ui orange text">${Math.round(totalDistance(data))}</span>km.`
     }
+    if(data.page!=undefined){
+        text+=` <i class="lightbulb icon"></i>This journey has a dedicated page: <a href="${data.page}">${data.linkText}</a>`
+    }
     $('#'+prefix+'_text').html(text);
 }
 
