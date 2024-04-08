@@ -2,6 +2,7 @@ var STYLE_NJ="color: black; background-color: palegreen;"
 var STYLE_NEAR="color: black; background-color: aqua;"
 var STYLE_FAR="color: white; background-color: orangered;"
 var STYLE_ABROAD="color: white; background-color: purple;"
+var myLoc=[32.063603,118.744264]
 
 var data=[
     {
@@ -12,7 +13,8 @@ var data=[
         loc:[{
             name:"滁州",
             altname:"Chuzhou"
-        }]
+        }],
+        globe:[32.28025222977801, 118.25857982120513]
     },
     {
         content:"达摩古洞",
@@ -22,7 +24,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[32.13450753576947, 118.79865612554016]
     },
     {
         content:"上海(￥8.5の旅行)",
@@ -33,7 +36,8 @@ var data=[
         loc:[{
             name:"上海",
             altname:"Shanghai"
-        }]
+        }],
+        globe:[31.22876861110972, 121.47585997363281]
     },
     {
         content:"熙南里、老门东",
@@ -43,7 +47,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[32.02524016612299, 118.7822577244791]
     },
     {
         content:"厦门",
@@ -54,7 +59,8 @@ var data=[
         loc:[{
             name:"厦门",
             altname:"Amoy"
-        }]
+        }],
+        globe:[24.47823792283241, 118.08722983759961]
     },
     {
         content:"汤山一号温泉(HHS冬大祭'24)",
@@ -65,7 +71,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[32.05210169380145, 119.06336199564463]
     },
     {
         content:"明觉(政治之旅)",
@@ -75,7 +82,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[31.54721341449204, 118.90159507825025]
     },
     {
         content:"南京花博园",
@@ -85,7 +93,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[31.762175483084512, 118.77468795884074]
     },
     {
         content:"南外新校区探索",
@@ -95,7 +104,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[31.998654,118.83963]
     },
     {
         content:"江心洲",
@@ -105,7 +115,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[32.0331762565581, 118.70334032768788]
     },
     {
         content:"济南ACM",
@@ -116,7 +127,8 @@ var data=[
         loc:[{
             name:"济南",
             altname:"Jinan"
-        }]
+        }],
+        globe:[36.55552744537021, 116.81161026700912]
     },
     {
         content:"哈尔滨ACM",
@@ -127,7 +139,8 @@ var data=[
         loc:[{
             name:"哈尔滨",
             altname:"Haerbin"
-        }]
+        }],
+        globe:[45.77324415964055, 126.6640436880847]
     },
     {
         content:"莫愁湖",
@@ -137,7 +150,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[32.03574590645321, 118.76359822373891]
     },
     {
         content:"日本",
@@ -161,7 +175,8 @@ var data=[
         },{
             name:"東京",
             altname:"Tokyo"
-        },]
+        },],
+        globe:[34.6682527294969, 135.49495949655758]
     },
     {
         content:"湖州",
@@ -176,7 +191,8 @@ var data=[
         {
             name:"南浔",
             altname:"Nanxun"
-        }]
+        }],
+        globe:[30.88924121849804, 120.08493684071456]
     },
     {
         content:"山西老家附近",
@@ -195,6 +211,7 @@ var data=[
             altname:"Sanmenxia"
         },
         ],
+        globe:[34.837049084587875, 111.20374838337541]
     },
     {
         content:"鱼嘴探索",
@@ -204,7 +221,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[31.981454491786973, 118.67824978613223]
     },
     {
         content:"溧阳",
@@ -216,7 +234,8 @@ var data=[
             name:"溧阳",
             altname:"Liyang"
         }],
-        detail:"天目湖、南山竹海"
+        detail:"天目湖、南山竹海",
+        globe:[31.31884723157039, 119.44629610664302]
     },
     {
         content:"7号线探线",
@@ -226,7 +245,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[32.132905,118.901894]
     },
     {
         content:"老山",
@@ -236,7 +256,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[32.106567,118.607822]
     },
     {
         content:"镇江",
@@ -246,7 +267,8 @@ var data=[
         loc:[{
             name:"镇江",
             altname:"Zhenjiang"
-        }]
+        }],
+        globe:[32.18756875165215, 119.42304682284521]
     },
     {
         content:"汤山矿坑公园",
@@ -256,7 +278,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[32.04153046843297, 119.04124005146599]
     },
     {
         content:"邗江数竞",
@@ -267,7 +290,8 @@ var data=[
         loc:[{
             name:"邗江",
             altname:"Hanjiang"
-        }]
+        }],
+        globe:[32.413481,119.374808]
     },
     {
         content:"高淳",
@@ -277,7 +301,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[31.320338305054378, 118.86781926677888]
     },
     {
         content:"紫金山",
@@ -287,7 +312,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[32.07054127162361, 118.85312253369837]
     },
     {
         content:"德基美术馆II",
@@ -297,7 +323,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[32.044561085699016, 118.78439889564427]
     },
     {
         content:"银杏湖民宿",
@@ -308,7 +335,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[31.781057616564993, 118.71298284668042]
     },
     {
         content:"德基美术馆",
@@ -318,7 +346,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[32.044561085699016, 118.78439889564427]
     },
     {
         content:"S6、麒麟有轨探线",
@@ -342,7 +371,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[32.09167042128037, 118.80202699564636]
     },
     {
         content:"灵谷寺",
@@ -352,7 +382,8 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[32.05496578776216, 118.8678259956447]
     },
     {
         content:"无想山",
@@ -362,6 +393,7 @@ var data=[
         loc:[{
             name:"南京",
             altname:"Nanjing"
-        }]
+        }],
+        globe:[31.602118045450478, 119.01618924266474]
     },
 ]

@@ -1,0 +1,167 @@
+<html>
+
+<head>
+    <title>My Trip - Statistics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <script src="
+    https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
+    "></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js
+    "></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css
+    " rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js"></script>
+    <link href="https://unpkg.com/vis-timeline@latest/styles/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+    <script src="data.js"></script>
+    <script src="common.js"></script>
+</head>
+
+<body>
+    <div class="ui container" id="main" style="margin-top: 20px; margin-bottom: 20px;">
+
+        <div class="ui menu sticky" style="margin-bottom: 20px; margin-top: 20px;">
+            <a class="item" href="index.html">
+                <img class="ui image" height="30" src="logo.png"
+                    alt="Website Logo" />
+            </a>
+            <a class="item" href="index.html">
+                <i class="tachometer alternate icon"></i>
+                Overview
+            </a>
+            <a class="item" href="list.html">
+                <i class="table icon"></i>
+                List
+            </a>
+            <a class="item" href="stats.html">
+                <i class="chartline icon"></i>
+                Statistics
+            </a>
+        </div>
+
+        <div id="content" style="margin-bottom: 20px; margin-top: 20px;">
+
+            <div class="ui statistics">
+                <div class="statistic">
+                    <div id="trip_count" class="value">
+                    0
+                    </div>
+                    <div class="label">
+                    Trips
+                    </div>
+                </div>
+                <div class="statistic">
+                    <div id="trip_dist" class="value">
+                    0
+                    </div>
+                    <div class="label">
+                    Kilometers travelled*
+                    </div>
+                </div>
+                <div class="statistic">
+                    <div id="trip_time" class="value">
+                    0
+                    </div>
+                    <div class="label">
+                    Days on the go
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui segment">
+                <h1>Transportation</h1>
+                <table id="tr" class="ui table">
+                    <tr>
+                        <th>Means of transportation</th>
+                        <th>Count</th>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="ui segment">
+                <h1>Partner</h1>
+                <table id="pa" class="ui table">
+                    <tr>
+                        <th>Partner</th>
+                        <th>Count</th>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="ui segment">
+                <h1>City of Destination</h1>
+                <table id="de" class="ui table">
+                    <tr>
+                        <th>City of Destination</th>
+                        <th>Count</th>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="ui warning message">
+                *距离的计算方法：从南京龙江地铁站到起始点的距离+行程的距离+结束点到龙江地铁站的距离。全部都按照直线距离计算。 <br/>
+                开始点的确定方法：如果是南京市内旅游，精确到具体场所；市外旅游只保证精确到市的地理中心位置。 <br/>
+                经纬度数据来源是Google Map和百度地图。
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function count(at, name, predicate){
+            var ans=0;
+            data.forEach(element => {
+                if(predicate(element)){
+                    ans++;
+                }
+            })
+            $('#'+at).append(`<tr><td>${name}</td><td>${ans}</td></tr>`)
+        }
+
+
+        function mp(ele){
+            if(ele.altname==undefined){
+                return ele.name
+            }else{
+                return ele.name+" "+ele.altname
+            }
+        }
+
+        $('#trip_count').text(sum(e => 1));
+        $('#trip_time').text(sum(e => e.end==undefined?1:1+days(e.start,e.end)));
+        $('#trip_dist').text(Math.round(sum(e=> e.globe==undefined?0:2*dist(myLoc,e.globe))))
+
+        count('tr',"飞机 Aeroplane",e => e.tag.includes('tr:p'))
+        count('tr',"高速铁路 High-speed Railway",e => e.tag.includes('tr:h'))
+        count('tr',"铁路 Railway",e => e.tag.includes('tr:t'))
+        count('tr',"地铁 Metro",e => e.tag.includes('tr:m') || e.tag.includes('tr:s'))
+        count('tr',"公交 Bus",e => e.tag.includes('tr:b'))
+        count('tr',"私家车 Car",e => e.tag.includes('tr:c'))
+
+        
+        count('pa',"ZKY",e => e.tag.includes('w:ZKY'))
+        count('pa',"XIZCM",e => e.tag.includes('w:XZM'))
+        count('pa',"HDD292",e => e.tag.includes('w:HDD'))
+        count('pa',"Prince",e => e.tag.includes('w:WZZ'))
+        count('pa',"Zzzyt",e => e.tag.includes('w:ZYT'))
+        count('pa',"家族旅行 Family Members",e => e.tag.includes('w:Family'))
+        count('pa',"独游 Only Myself",e => e.tag.includes('w:Myself'))
+
+        var st=new Set()
+        for(var i in data){
+            for(var j in data[i].loc){
+                var ele=data[i].loc[j]
+                st.add(mp(ele))
+            }
+        }
+
+        st.forEach(ele => {
+            count("de",ele,e=>e.loc.map(mp).includes(ele))
+        });
+
+    </script>
+</body>
+
+</html>

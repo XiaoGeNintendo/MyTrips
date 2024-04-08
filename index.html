@@ -31,9 +31,9 @@
                 <i class="tachometer alternate icon"></i>
                 Overview
             </a>
-            <a class="item" href="lists.html">
+            <a class="item" href="list.html">
                 <i class="table icon"></i>
-                Lists
+                List
             </a>
             <a class="item" href="stats.html">
                 <i class="chartline icon"></i>
@@ -117,7 +117,7 @@
         timeline.on("select",function(e){
             $('#qv').transition('scale in')
             console.log(data[e.items[0]])
-            fillView(data[e.items[0]],'qv')
+            fillView(data[e.items[0]],'qv',true)
         })
     </script>
 </body>
