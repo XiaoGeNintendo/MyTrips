@@ -37,7 +37,9 @@ var data=[
             name:"上海",
             altname:"Shanghai"
         }],
-        globe:[31.22876861110972, 121.47585997363281]
+        globe:[31.22876861110972, 121.47585997363281],
+        page:"diary/shanghai.html",
+        linkText:"Diary (Chinese)"
     },
     {
         content:"熙南里、老门东",
@@ -60,7 +62,9 @@ var data=[
             name:"厦门",
             altname:"Amoy"
         }],
-        globe:[24.47823792283241, 118.08722983759961]
+        globe:[24.47823792283241, 118.08722983759961],
+        page:"diary/xiamen.html",
+        linkText:"Diary (Chinese)"
     },
     {
         content:"汤山一号温泉(HHS冬大祭'24)",
@@ -188,7 +192,9 @@ var data=[
                 [35.49633933867448, 138.76660368798593], //mt fuji
                 [35.68248305436946, 139.78175070789558],
                 [35.76710123923504, 140.38231334585927], //narita airport
-            ]
+            ],
+            page:"diary/jp.pdf",
+            linkText:"Diary (Chinese PDF)"
     },
     {
         content:"湖州",
@@ -204,7 +210,9 @@ var data=[
             name:"南浔",
             altname:"Nanxun"
         }],
-        globe:[30.88924121849804, 120.08493684071456]
+        globe:[30.88924121849804, 120.08493684071456],
+        page:"diary/huzhou.pdf",
+        linkText:"Diary (Chinese PDF)"
     },
     {
         content:"山西老家附近",
@@ -256,7 +264,9 @@ var data=[
             altname:"Liyang"
         }],
         detail:"天目湖、南山竹海",
-        globe:[31.31884723157039, 119.44629610664302]
+        globe:[31.31884723157039, 119.44629610664302],
+        page:"diary/liyang.pdf",
+        linkText:"Diary (Chinese PDF)"
     },
     {
         content:"7号线探线",
@@ -409,7 +419,9 @@ var data=[
             name:"南京",
             altname:"Nanjing"
         }],
-        globe:[32.05496578776216, 118.8678259956447]
+        globe:[32.05496578776216, 118.8678259956447],
+        page:"diary/lgs.pdf",
+        linkText:"Diary (Chinese)"
     },
     {
         content:"无想山",
@@ -420,6 +432,8 @@ var data=[
             name:"南京",
             altname:"Nanjing"
         }],
-        globe:[31.602118045450478, 119.01618924266474]
+        globe:[31.602118045450478, 119.01618924266474],
+        page:"diary/wxs.pdf",
+        linkText:"Diary (Chinese PDF)"
     },
 ]
