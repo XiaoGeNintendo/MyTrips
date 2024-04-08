@@ -13,10 +13,42 @@
     <link href="
     https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css
     " rel="stylesheet">
+
     <script type="text/javascript" src="https://unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js"></script>
     <link href="https://unpkg.com/vis-timeline@latest/styles/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="
+    https://cdn.jsdelivr.net/npm/proj4@2.11.0/dist/proj4.min.js
+    "></script>
+
+    <style>
+        
+    .animated-line {
+        stroke-dasharray: 3;
+        stroke-dashoffset: 10;
+        animation: dash 5s linear infinite;
+    }
+
+    @keyframes dash {
+        from {
+            stroke-dashoffset: 100;
+        }
+
+        to {
+            stroke-dashoffset: 88;
+        }
+    }
+
+    </style>
+    
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+
+    <script src="https://img.hcharts.cn/mapdata/custom/world.js"></script>
+    <script src="https://data.jianshukeji.com/geochina/china.js"></script>
+
     <script src="data.js"></script>
     <script src="common.js"></script>
+    <script src="globe.js"></script>
 </head>
 
 <body>
@@ -45,34 +77,15 @@
             </a>
         </div>
 
+        
         <div id="content" style="margin-bottom: 20px; margin-top: 20px;">
-            <h1>List of Travel Data</h1>
-            <div id="qv" class="ui segment">
-                <div id="qv_tr">Now loading...</div>
-                <b id="qv_name">Now loading...</b>
-                <div id="qv_text">Now loading...</div>
-            </div>
+            <div id="cn_map"></div>
+
+            <div id="globe_map"></div>
         </div>
 
     </div>
 
-    <script>
-        //load data
-        var html=""
-        for(var i in data){
-            html+=`
-                <span id="${i}_tr"></span>
-                <b id="${i}_name"></b>
-                <span id="${i}_text"></span> <br/> <br/>
-            `
-        }
-
-        $('#qv').html(html);
-
-        for(var i in data){
-            fillView(data[i],i);
-        }
-    </script>
 </body>
 
 </html>

@@ -43,6 +43,10 @@
                 <i class="tachometer alternate icon"></i>
                 Overview
             </a>
+            <a class="item" href="globe.html">
+                <i class="map icon"></i>
+                Map
+            </a>
             <a class="item" href="list.html">
                 <i class="table icon"></i>
                 List
@@ -84,10 +88,7 @@
                 <div id="qv_text"></div>
             </div>
 
-            <div class="ui segment">
-                <h1>Map View</h1>
-                <div id="global_map"></div>
-            </div>
+            
         </div>
 
     </div>
@@ -136,59 +137,6 @@
             console.log(data[e.items[0]])
             fillView(data[e.items[0]],'qv',true)
         })
-
-
-        var seriesData=[]
-        for(var i in data){
-            var e=data[i]
-            if(e.globe==undefined || e.style==STYLE_ABROAD){
-                continue
-            }
-            if(typeof e.globe[0]=='number'){
-                seriesData.push({name:e.content,lat:e.globe[0],lon:e.globe[1]})
-            }else{
-                for(var j in e.globe){
-                    var ee=e.globe[j]
-                    
-                    seriesData.push({name:e.content,lat:ee[0],lon:ee[1]})
-                }
-            }
-        }
-
-        // Initiate the chart
-        $('#global_map').highcharts('Map', {
-            title: {
-                text: 'Map of China',
-            },
-            subtitle:{
-                text: "Note that this map may contain error on borders. Please contact Jianshu Technology for the problem."
-            },
-            mapNavigation: {
-                enabled: true
-            },
-            tooltip: {
-                headerFormat: '',
-                pointFormat: '<b>{point.name}</b>'
-            },
-            series: [{
-                mapData: Highcharts.maps['cn/china'],
-                name: 'Basemap',
-                borderColor: '#A0A0A0',
-                showInLegend: false
-            }, {
-                // Specify points using lat/lon
-                type: 'mappoint',
-                name: 'Tour Destinations',
-                color: '#0369f3',
-                marker: {
-                    "fillColor": "white",
-                    "lineColor": "black",
-                    "lineWidth": 2,
-                    "radius": 3
-                },
-                data: seriesData
-            }]
-        });
 
 
     </script>
