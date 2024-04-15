@@ -4,6 +4,40 @@ var STYLE_FAR="color: white; background-color: orangered;"
 var STYLE_ABROAD="color: white; background-color: purple;"
 var myLoc=[32.063603,118.744264]
 
+/*
+{
+    content:"吴家大洼", //the name of the trip
+    start:"2024-4-14", //the date in YYYY-MM-DD
+    style:STYLE_NJ, //the style to be displayed on the timeline. Have preset above.
+    //Tags to supplement information for the system.
+    //- "tr:" identifies transportation means. Possible values are:
+    //h: high speed train
+    //t: train
+    //m or s: metro
+    //b: bus
+    //p: plane
+    //c: car
+    //- "w:" identifies "with whom". It is case sensitive. Some presets:
+    //Myself
+    //Family
+    tag:["tr:c","w:Family"], 
+    
+    //city of destinations in a list. altname is not mandatory.
+    loc:[{
+        name:"南京",
+        altname:"Nanjing"
+    }],
+    
+    //the location of the destination in format [lat,long] or [[lat,long],[lat,long],...]
+    //You can find such information on https://map.google.com by right-clicking
+    //Or https://api.map.baidu.com/lbsapi/getpoint/index.html Note: Baidu returns [long,lat]. Please be careful!!
+    globe:[[32.10040233513357, 118.62085518551899],[32.09799052838991, 118.59370303800573]]
+    //a link
+    page:"https://blog.hellholestudios.top/archives/1332",
+    //link's text
+    linkText:"Diary (Chinese)"
+},
+*/
 var data=[
     {
     content:"吴家大洼",
@@ -15,7 +49,7 @@ var data=[
         altname:"Nanjing"
     }],
     globe:[[32.10040233513357, 118.62085518551899],[32.09799052838991, 118.59370303800573]]
-},
+    },
     {
         content:"滁州",
         start:"2024-4-5",
