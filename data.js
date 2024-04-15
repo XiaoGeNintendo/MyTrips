@@ -6,6 +6,17 @@ var myLoc=[32.063603,118.744264]
 
 var data=[
     {
+    content:"吴家大洼",
+    start:"2024-4-14",
+    style:STYLE_NJ,
+    tag:["tr:c","w:Family"],
+    loc:[{
+        name:"南京",
+        altname:"Nanjing"
+    }],
+    globe:[[32.10040233513357, 118.62085518551899],[32.09799052838991, 118.59370303800573]]
+},
+    {
         content:"滁州",
         start:"2024-4-5",
         style:STYLE_NEAR,
