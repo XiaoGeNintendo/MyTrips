@@ -25,7 +25,9 @@ var data=[
             name:"滁州",
             altname:"Chuzhou"
         }],
-        globe:[32.28025222977801, 118.25857982120513]
+        globe:[32.28025222977801, 118.25857982120513],
+        page:"https://blog.hellholestudios.top/archives/1362",
+        linkText:"Diary (Chinese)"
     },
     {
         content:"达摩古洞",
