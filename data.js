@@ -447,6 +447,17 @@ var data=[
     ]
     },
     {
+        content:"NJTHO 2021",
+        start:"2021-12-26",
+        style:STYLE_NJ,
+        tag:["tr:c","w:ZKY","w:ZYT"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }],
+        globe:[32.00623325904225, 118.72466700616351]
+    },
+    {
         content:"红山动物园春游",
         start:"2021-11-13",
         style:STYLE_NJ,
