@@ -40,6 +40,17 @@ var myLoc=[32.063603,118.744264]
 */
 var data=[
     {
+    content:"象山湖公园",
+    start:"2024-5-2",
+    style:STYLE_NJ,
+    tag:["tr:c","w:Family"],
+    loc:[{
+        name:"南京",
+        altname:"Nanjing"
+    }],
+    globe:[32.086906028058216, 118.61767661113373]
+    },
+    {
     content:"吴家大洼",
     start:"2024-4-14",
     style:STYLE_NJ,
