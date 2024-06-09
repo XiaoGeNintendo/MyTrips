@@ -40,6 +40,17 @@ var myLoc=[32.063603,118.744264]
 */
 var data=[
     {
+    content:"浦口",
+    start:"2024-6-9",
+    style:STYLE_NJ,
+    tag:["tr:b","tr:bi","w:ZKY"],
+    loc:[{
+        name:"南京",
+        altname:"Nanjing"
+    }],
+    globe:[[32.09608585751714, 118.72161580160076],[32.131462142496346, 118.74228724991852]]
+    },
+    {
     content:"句容",
     start:"2024-5-19",
     style:STYLE_NEAR,

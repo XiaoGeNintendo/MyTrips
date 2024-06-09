@@ -19,6 +19,8 @@ function fillView(data, prefix, slashMode=false){
                 id="🚗 Car"
             }else if(si.endsWith("h")){ //high speed railway
                 id="🚄 High-speed train"
+            }else if(si.endsWith("bi")){ //bicycle
+                id="🚲 Bike"
             }
 
             s+='<div class="ui label">'+id+'</div>'
