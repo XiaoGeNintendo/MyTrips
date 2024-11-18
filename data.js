@@ -40,6 +40,33 @@ var myLoc=[32.063603,118.744264]
 */
 var data=[
     {
+    content:"上海ACM",
+    start:"2024-11-16",
+    end:"2024-11-17",
+    style:STYLE_NEAR,
+    tag:["tr:h","w:ZZX","w:CDR"],
+    loc:[{
+        name:"上海",
+        altname:"Shanghai"
+    }],
+    globe:[[31.313231588039564, 121.39486107810913]]
+    },
+    {
+    content:"华为Hackathon",
+    start:"2024-10-25",
+    end:"2024-10-27",
+    style:STYLE_FAR,
+    tag:["tr:p","tr:b","tr:m","tr:c","w:QHL","w:LLQ"],
+    loc:[{
+        name:"东莞",
+        altname:"Dongguan"
+    },{
+        name:"深圳",
+        altname:"Shenzhen"
+    }],
+    globe:[[22.638657123104284, 113.81369260397328],[22.901856027344433, 113.88496379278725],[22.523044239982784, 114.00061978555637]]
+    },
+    {
     content:"上海（公交地铁only）",
     start:"2024-8-19",
     end:"2024-8-26",
