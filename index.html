@@ -29,6 +29,13 @@
 
     <script src="data.js"></script>
     <script src="common.js"></script>
+    <script src="activity_grid.js"></script>
+
+    <style>
+        .wday{
+            font-size: 0.7em;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,6 +87,16 @@
                     <label>Show Range Instead Of Start Date</label>
                 </div>
                 <div id="timeline"></div>
+
+                <div id="timeline_svg_div">
+                    <svg id="timeline_svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 721 120">
+                        <!-- <rect width="360" height="50" y="10" x="10" fill="#000000"></rect> -->
+                    </svg>
+                </div>
+
+                <label>选择年份</label>
+                <input type="number" id="year" min="2010" max="2099" value="2024" step="1" oninput="reloadActivity(this.value)">
+
             </div>
 
             <div id="qv" class="ui segment">
@@ -96,6 +113,12 @@
     </div>
 
     <script>
+        // setTimeout(function(){
+        //     reloadActivity(2024)
+        // },500)
+        // reloadActivity(2024);
+        // $('#timeline_svg').append('<rect width="360" height="50" y="10" x="10" fill="#000000"></rect>');
+        
 
         function changeBox(){
             if($('#range').prop('checked')){
@@ -140,6 +163,8 @@
             fillView(data[e.items[0]],'qv',true)
         })
 
+        //reload activity
+        reloadActivity(2024);
 
     </script>
 </body>
