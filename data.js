@@ -40,6 +40,17 @@ var myLoc=[32.063603,118.744264]
 */
 var data=[
     {
+    content:"栖霞山",
+    start:"2024-12-16",
+    style:STYLE_NJ,
+    tag:["tr:c","w:Family"],
+    loc:[{
+        name:"南京",
+        altname:"Nanjing"
+    }],
+    globe:[32.155588278290665, 118.96514156846214]
+    },
+    {
     content:"上海ACM",
     start:"2024-11-16",
     end:"2024-11-17",
