@@ -163,8 +163,9 @@
             fillView(data[e.items[0]],'qv',true)
         })
 
-        //reload activity
-        reloadActivity(2024);
+        //reload activity of current year
+        $('#year').val(new Date().getFullYear());
+        reloadActivity(new Date().getFullYear());
 
     </script>
 </body>

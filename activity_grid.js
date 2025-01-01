@@ -33,10 +33,18 @@ function reloadActivity(year){
             // console.log(activity.content);
             var start=new Date(activity.start);
             var end=new Date(activity._end);
+            
+            //stupid JS prasing
+            end.setHours(start.getHours());
+
+            // console.log(start,end,activity);
             while(start<=end){
+                // console.log(start.getFullYear(),year);
                 if(start.getFullYear()==year){
                     var _content=`${activity.content}<br/>${year}年${start.getMonth()+1}月${start.getDate()}日`;
                     datemap[dateHash(start)]={color:getBackgroundColor(activity.style),content:_content,index:i};
+                    // console.log("Pend:",_content);
+                    
                 }
                 start.setDate(start.getDate()+1);
                 // console.log(start);

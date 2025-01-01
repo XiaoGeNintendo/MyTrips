@@ -40,6 +40,22 @@ var myLoc=[32.063603,118.744264]
 */
 var data=[
     {
+        content:"芜湖探线&银杏湖跨年音乐会",
+        start:"2024-12-31",
+        end:"2025-1-1",
+        style:STYLE_NEAR,
+        tag:["tr:h","tr:c","tr:m","w:Myself","w:Family"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        },
+        {
+            name:"芜湖",
+            altname:"Wuhu"
+        }],
+        globe:[[31.348664422451343, 118.43109974993274],[32.05809727420399, 118.73981570624122],[31.802141724831543, 118.71407188457921]]
+    },
+    {
     content:"7号线全线探线",
     start:"2024-12-29",
     style:STYLE_NJ,
