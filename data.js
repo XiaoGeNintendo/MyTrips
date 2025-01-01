@@ -150,7 +150,7 @@ var data=[
     start:"2024-7-29",
     end:"2024-8-7",
     style:STYLE_FAR,
-    tag:["tr:b","tr:t","tr:p","tr:m","tr:h","tr:c","tr:bi","w:ZKY"],
+    tag:["tr:b","tr:t","tr:p","tr:m","tr:h","tr:bi","w:ZKY"],
     loc:[{
         name:"昆明",
         altname:"Kunming"
@@ -172,7 +172,7 @@ var data=[
     content:"浦口",
     start:"2024-6-9",
     style:STYLE_NJ,
-    tag:["tr:b","tr:bi","w:ZKY"],
+    tag:["tr:b","tr:bi","tr:sh","w:ZKY"],
     loc:[{
         name:"南京",
         altname:"Nanjing"
@@ -481,7 +481,7 @@ var data=[
         content:"7号线探线",
         start:"2023-6-15",
         style:STYLE_NJ,
-        tag:["tr:m","tr:b","w:ZKY"],
+        tag:["tr:bi","tr:m","tr:b","w:ZKY"],
         loc:[{
             name:"南京",
             altname:"Nanjing"

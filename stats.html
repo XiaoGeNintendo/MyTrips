@@ -146,6 +146,7 @@
         count('tr',"公交 Bus",e => e.tag.includes('tr:b'))
         count('tr',"私家车 Car",e => e.tag.includes('tr:c'))
         count('tr',"自行车 Bicycle",e => e.tag.includes('tr:bi'))
+        count('tr',"船 Ship/Cruise",e => e.tag.includes('tr:sh'))
 
         
         count('pa',"ZKY",e => e.tag.includes('w:ZKY'))
@@ -155,7 +156,7 @@
         count('pa',"Zzzyt",e => e.tag.includes('w:ZYT'))
         count('pa',"家族旅行 Family Members",e => e.tag.includes('w:Family'))
         count('pa',"独游 Only Myself",e => e.tag.includes('w:Myself'))
-
+        count('pa',"ACM队 ACM Team",e => e.tag.includes('w:ZZX'))
         var st=new Set()
         for(var i in data){
             for(var j in data[i].loc){

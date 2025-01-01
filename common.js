@@ -17,10 +17,12 @@ function fillView(data, prefix, slashMode=false){
                 id="🚇 Metro"
             }else if(si.endsWith("c")){ //car
                 id="🚗 Car"
-            }else if(si.endsWith("h")){ //high speed railway
+            }else if(si.endsWith(":h")){ //high speed railway
                 id="🚄 High-speed train"
             }else if(si.endsWith("bi")){ //bicycle
                 id="🚲 Bike"
+            }else if(si.endsWith("sh")){ //ship
+                id="🚢 Ship"
             }
 
             s+='<div class="ui label">'+id+'</div>'
