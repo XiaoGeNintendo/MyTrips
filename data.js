@@ -40,6 +40,24 @@ var myLoc=[32.063603,118.744264]
 */
 var data=[
     {
+        content:"合肥非空运转",
+        start:"2025-2-22",
+        style:STYLE_NEAR,
+        tag:["tr:h","tr:t","tr:m","w:Family"],
+        loc:[{
+            name:"合肥",
+            altname:"Hefei"
+        },{
+            name:"芜湖",
+            altname:"Wuhu"
+        }
+        ],
+        globe:[
+            [31.834797567333414, 117.23810701746953],
+            [31.35418791508688, 118.43514131421733]
+        ],
+    },
+    {
         content:"公交地铁S2",
         start:"2025-2-8",
         end:"2025-2-13",
