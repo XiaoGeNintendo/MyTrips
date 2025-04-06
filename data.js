@@ -40,6 +40,20 @@ var myLoc=[32.063603,118.744264]
 */
 var data=[
     {
+        content:"东庐观音寺",
+        start:"2025-4-6",
+        style:STYLE_NJ,
+        tag:["tr:c","w:Family"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }
+        ],
+        globe:[
+            [31.641154644515282, 119.1090082471966]
+        ],
+    },
+    {
         content:"合肥非空运转",
         start:"2025-2-22",
         style:STYLE_NEAR,
