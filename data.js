@@ -40,6 +40,71 @@ var myLoc=[32.063603,118.744264]
 */
 var data=[
     {
+        content:"公交地铁S3",
+        start:"2025-7-4",
+        end:"2025-7-9",
+        style:STYLE_FAR,
+        tag:["tr:h","tr:b","tr:t","w:ZYT"],
+        loc:[{
+            name:"砀山",
+            altname:"Dangshan"
+        },
+        {
+            name:"商丘",
+            altname:"Shangqiu"
+        },
+        {
+            name:"兰考",
+            altname:"Lankao"
+        },
+        {
+            name:"开封",
+            altname:"Kaifeng"
+        },
+        {
+            name:"郑州",
+            altname:"Zhengzhou"
+        }
+        ],
+        globe:[
+            [34.21200163477587, 117.28750672209237], //xuzhou
+            [34.56348882188939, 116.32181569155642], //dangshan
+            [34.23114216403074, 116.14811939372223], //xiayi
+            [34.40590938961319, 115.64489114589661], //shangqiu
+            [34.81318837258077, 114.80399534417283], //lankao
+            [34.804664593385446, 114.31606818120719], //kaifeng
+            [34.75585654441137, 113.61894093928865], //zhengzhou
+        ],
+    },
+    {
+        content:"南大浦口校区和太古可口可乐厂",
+        start:"2025-7-1",
+        style:STYLE_NJ,
+        tag:["tr:b","w:Myself"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }
+        ],
+        globe:[
+            32.17403238427789, 118.70759606714832
+        ],
+    },
+    {
+        content:"满记甜品自助",
+        start:"2025-6-11",
+        style:STYLE_NJ,
+        tag:["tr:m","tr:c","w:XZM"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }
+        ],
+        globe:[
+            [31.964633267731557, 118.7288848148817]
+        ],
+    },
+    {
         content:"石臼湖、龙猫草海、漆桥古镇",
         start:"2025-5-3",
         style:STYLE_NJ,
