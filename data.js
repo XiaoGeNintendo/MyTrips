@@ -40,6 +40,22 @@ var myLoc=[32.063603,118.744264]
 */
 var data=[
     {
+        content:"神秘小岛",
+        start:"2025-7-12",
+        end:"2025-7-13",
+        style:STYLE_NEAR,
+        tag:["tr:c","w:ZYT","w:HDD","w:XZM","w:Family","w:ZHR"],
+        loc:[{
+            name:"宁国",
+            altname:"Ningguo"
+        },
+        ],
+        globe:[
+            [30.497814042245544, 118.8121504861024],
+            [30.479851,118.72214]
+        ],
+    },
+    {
         content:"公交地铁S3",
         start:"2025-7-4",
         end:"2025-7-9",
