@@ -21,30 +21,13 @@
     https://cdn.jsdelivr.net/npm/proj4@2.11.0/dist/proj4.min.js
     "></script>
 
-    <style>
-        
-    .animated-line {
-        stroke-dasharray: 3;
-        stroke-dashoffset: 10;
-        animation: dash 5s linear infinite;
-    }
-
-    @keyframes dash {
-        from {
-            stroke-dashoffset: 100;
-        }
-
-        to {
-            stroke-dashoffset: 88;
-        }
-    }
-
-    </style>
     
-    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
-
-    <script src="https://img.hcharts.cn/mapdata/custom/world.js"></script>
-    <script src="https://data.jianshukeji.com/geochina/china.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
 
     <script src="data.js"></script>
     <script src="common.js"></script>
@@ -79,13 +62,19 @@
 
         
         <div id="content" style="margin-bottom: 20px; margin-top: 20px;">
-            <div id="cn_map"></div>
-
-            <div id="globe_map"></div>
+            <div id="map" style="height: 500px;"></div>
         </div>
 
+        <div class="ui warning message">
+            This page uses OpenStreetMap data. Country/Region borders may not be accurate.
+        </div>
     </div>
 
+    <script>
+        $(document).ready(function() {
+            loadMap();
+        });
+    </script>
 </body>
 
 </html>
