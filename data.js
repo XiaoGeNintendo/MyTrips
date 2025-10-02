@@ -40,6 +40,21 @@ var myLoc=[32.063603,118.744264]
 */
 var data=[
     {
+        content:"平山森林公园、恋山坝上草原",
+        start:"2025-10-2",
+        style:STYLE_NJ,
+        tag:["tr:c","w:Family"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }
+        ],
+        globe:[
+            [32.45100645771533, 118.83593749969893],
+            [32.46432595122143, 118.77007255087645]
+        ],
+    },
+    {
         content:"呼伦贝尔",
         start:"2025-8-11",
         end:"2025-8-19",
@@ -83,6 +98,10 @@ var data=[
             [47.17683566580556, 119.9424172195922], //Arxan
             [49.21177894733427, 119.75736616667443], //Hailar
         ],
+        //a link
+        page:"https://blog.hellholestudios.top/archives/1788",
+        //link's text
+        linkText:"Diary (Chinese)"
     },
     {
         content:"神秘小岛",
