@@ -72,6 +72,14 @@
                     Days on the go
                     </div>
                 </div>
+                <div class="statistic">
+                    <div id="trip_ratio" class="value">
+                    0
+                    </div>
+                    <div class="label">
+                    ... of days on the go
+                    </div>
+                </div>
             </div>
 
             <div class="ui segment">
@@ -137,7 +145,15 @@
 
         $('#trip_count').text(sum(e => 1));
         $('#trip_time').text(sum(e => e.end==undefined?1:1+days(e.start,e.end)));
-        $('#trip_dist').text(Math.round(sum(e=> totalDistance(e))))
+        $('#trip_dist').text(Math.round(sum(e=> totalDistance(e))));
+
+        function getTripRatio(){
+            let t=sum(e => e.end==undefined?1:1+days(e.start,e.end));
+            let t2=days(new Date(2021,2,14),new Date())+1; // 2021-02-14是第一次出发的日期
+            return t2/t;
+        }
+
+        $('#trip_ratio').text("≈1/"+Math.round(getTripRatio()));
 
         count('tr',"飞机 Aeroplane",e => e.tag.includes('tr:p'))
         count('tr',"高速铁路 High-speed Railway",e => e.tag.includes('tr:h'))

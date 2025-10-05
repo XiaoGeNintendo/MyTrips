@@ -39,6 +39,21 @@ var myLoc=[32.063603,118.744264]
 },
 */
 var data=[
+     {
+        content:"长江大桥玻璃栈道",
+        start:"2025-10-5",
+        style:STYLE_NJ,
+        tag:["tr:bi","w:Family"],
+        loc:[{
+            name:"南京",
+            altname:"Nanjing"
+        }
+        ],
+        globe:[
+            [32.11005241102495, 118.74894801633337]
+        ],
+    },
+
     {
         content:"平山森林公园、恋山坝上草原",
         start:"2025-10-2",
